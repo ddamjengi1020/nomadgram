@@ -1,5 +1,10 @@
+// npx prisma migrate save --name init --experimental >>> executing in prisma directory 
+// npx prisma migrate up --experimental
+// npx prisma generate
+
+
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url = "***"
 }
 
