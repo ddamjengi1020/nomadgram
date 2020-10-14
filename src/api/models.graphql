@@ -13,6 +13,7 @@ type User {
   rooms: [Room!]!
   fromMessage: [Message!]!
   ToMessage: [Message!]!
+  loginSecret: String
 }
 
 type Post {
