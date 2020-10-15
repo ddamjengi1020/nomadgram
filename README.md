@@ -9,6 +9,8 @@ Express + Prisma + React & React Native
 ## User Stories
 
 - [x] Create account
+- [x] Request secret
+- [ ] Confirm secret
 - [ ] Log in
 - [ ] Like / Unlike a photo
 - [ ] Comment on a photo

@@ -6,10 +6,6 @@ import path from "path";
 
 dotenv.config({ path: path.resolve(__dirname, ".env") });
 
-import { sendSecretMail } from "./utils";
-
-sendSecretMail("silluat11@gmail.com", "강한 남자");
-
 const PORT = process.env.PORT;
 
 const server = new GraphQLServer({ schema });
