@@ -1,4 +1,5 @@
 import { PrismaClient } from "@prisma/client";
+import { generateToken } from "../../../utils";
 
 const prisma = new PrismaClient();
 
@@ -8,8 +9,8 @@ export default {
       const { secret, email } = args;
       const user = await prisma.user.findOne({ where: { email } });
       if (user.loginSecret === secret) {
-        //Jwt
-        return "TOKEN";
+        const token = generateToken(user.id);
+        return token;
       } else {
         throw Error("Wrong email/secret combination");
       }
