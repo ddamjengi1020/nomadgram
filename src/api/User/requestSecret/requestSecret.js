@@ -1,11 +1,8 @@
-import { PrismaClient } from "@prisma/client";
 import { generateSecret, sendSecretMail } from "../../../utils";
-
-const prisma = new PrismaClient();
 
 export default {
   Mutation: {
-    requestSecret: async (_, args) => {
+    requestSecret: async (_, args, { prisma }) => {
       const { email } = args;
       const loginSecret = generateSecret();
       try {
