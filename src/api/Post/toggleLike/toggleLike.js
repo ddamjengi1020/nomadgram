@@ -17,7 +17,12 @@ export default {
           },
         });
         if (existedLike.length > 0) {
-          // Do something
+          await prisma.like.deleteMany({
+            where: {
+              userId: user.id,
+              postId,
+            },
+          });
         } else {
           await prisma.like.create({
             data: {
