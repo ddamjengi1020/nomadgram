@@ -10,10 +10,10 @@ Express + Prisma + React & React Native
 
 - [x] Create account
 - [x] Request secret
-- [ ] Confirm secret
-- [ ] Log in
-- [ ] Like / Unlike a photo
-- [ ] Comment on a photo
+- [x] Confirm secret
+- [x] Log in
+- [x] Like / Unlike a post
+- [x] Comment on a post
 - [ ] Search by user
 - [ ] Search by location
 - [ ] See user profile
