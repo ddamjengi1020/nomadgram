@@ -1,28 +1,21 @@
 import { isAuthenticated } from "../../../middlewares";
-import { PrismaClient } from "@prisma/client";
-
-const prisma = new PrismaClient();
 
 export default {
   Mutation: {
-    toggleLike: async (_, args, { request }) => {
+    toggleLike: async (_, args, { request, prisma }) => {
       isAuthenticated(request);
       const { postId } = args;
       const { user } = request;
+      const filterOptions = {
+        where: {
+          userId: user.id,
+          postId,
+        },
+      };
       try {
-        const existedLike = await prisma.like.findMany({
-          where: {
-            userId: user.id,
-            postId,
-          },
-        });
+        const existedLike = await prisma.like.findMany(filterOptions);
         if (existedLike.length > 0) {
-          await prisma.like.deleteMany({
-            where: {
-              userId: user.id,
-              postId,
-            },
-          });
+          await prisma.like.deleteMany(filterOptions);
         } else {
           await prisma.like.create({
             data: {

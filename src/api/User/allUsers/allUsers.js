@@ -4,6 +4,11 @@ export default {
       prisma.user.findMany({
         include: {
           likes: true,
+          comments: {
+            include: {
+              user: true,
+            },
+          },
         },
       }),
   },
