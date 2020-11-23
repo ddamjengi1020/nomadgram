@@ -9,6 +9,8 @@ export default {
               user: true,
             },
           },
+          followers: true,
+          following: true,
         },
       }),
   },

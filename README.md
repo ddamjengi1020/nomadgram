@@ -16,7 +16,7 @@ Express + Prisma + React & React Native
 - [x] Comment on a post
 - [x] Search by user
 - [x] Search by location
-- [ ] Follow / Unfollow User
+- [x] Follow / Unfollow User
 - [ ] See user profile
 - [ ] See the full photo
 - [ ] Edit my profile
