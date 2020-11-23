@@ -14,10 +14,10 @@ Express + Prisma + React & React Native
 - [x] Log in
 - [x] Like / Unlike a post
 - [x] Comment on a post
-- [ ] Search by user
-- [ ] Search by location
-- [ ] See user profile
+- [x] Search by user
+- [x] Search by location
 - [ ] Follow / Unfollow User
+- [ ] See user profile
 - [ ] See the full photo
 - [ ] Edit my profile
 - [ ] Upload a photo

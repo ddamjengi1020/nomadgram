@@ -8,8 +8,7 @@ export default {
       const { user } = request;
       const filterOptions = {
         where: {
-          userId: user.id,
-          postId,
+          AND: [{ userId: user.id }, { postId }],
         },
       };
       try {

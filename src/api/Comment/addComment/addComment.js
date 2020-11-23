@@ -1,4 +1,4 @@
-import { isAuthenticated } from "../../middlewares";
+import { isAuthenticated } from "../../../middlewares";
 
 import { PrismaClient } from "@prisma/client";
 const prisma = new PrismaClient();
