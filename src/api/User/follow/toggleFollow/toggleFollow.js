@@ -1,9 +1,6 @@
-import { PrismaClient } from "@prisma/client";
-import { isAuthenticated } from "../../../../middlewares";
-const prisma = new PrismaClient();
 export default {
   Mutation: {
-    toggleFollow: async (_, args, { request }) => {
+    toggleFollow: async (_, args, { request, isAuthenticated, prisma }) => {
       isAuthenticated(request);
       const { id } = args;
       const { user } = request;
