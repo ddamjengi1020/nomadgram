@@ -20,7 +20,7 @@ Express + Prisma + React & React Native
 - [x] See user profile
 - [x] See the full post
 - [x] Edit my profile
-- [ ] Computed fields - isFollowing, isSelf, isLiked
+- [x] Computed fields - isFollowing, isSelf, isLiked
 - [ ] Upload a photo
 - [ ] Edit the photo(Delete)
 - [ ] See the feed

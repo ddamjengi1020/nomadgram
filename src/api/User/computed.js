@@ -19,4 +19,16 @@ export default {
       return user.id === parentId;
     },
   },
+  Post: {
+    isLiked: (parent, _, { request }) => {
+      const { user } = request;
+      const { id: parentId } = parent;
+      return prisma.like.count({
+        where: {
+          postId: parentId,
+          userId: user.id,
+        },
+      });
+    },
+  },
 };

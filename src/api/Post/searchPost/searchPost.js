@@ -19,6 +19,9 @@ export default {
               },
             ],
           },
+          include: {
+            likes: true,
+          },
         });
       }
       return resultPost;
