@@ -1,6 +1,5 @@
-import { PrismaClient } from "@prisma/client";
+import prisma from "../../../prisma";
 
-const prisma = new PrismaClient();
 export default {
   Query: {
     me: (_, __, { request, isAuthenticated }) => {

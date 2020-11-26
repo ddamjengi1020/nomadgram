@@ -1,6 +1,8 @@
+import prisma from "../../../prisma";
+
 export default {
   Mutation: {
-    createAccount: async (_, args, { prisma }) => {
+    createAccount: async (_, args) => {
       const { userName, email, firstName, lastName, bio } = args;
       const user = await prisma.user.create({
         data: {

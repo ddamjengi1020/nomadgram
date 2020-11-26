@@ -1,6 +1,8 @@
+import prisma from "../../../prisma";
+
 export default {
   Query: {
-    searchPost: async (_, args, { prisma }) => {
+    searchPost: async (_, args) => {
       const { term } = args;
       let resultPost = [];
       if (term !== "") {

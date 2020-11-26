@@ -1,10 +1,13 @@
+import prisma from "../../../prisma";
+
 export default {
   Query: {
-    seeFullPost: async (_, args, { prisma }) => {
+    seeFullPost: async (_, args) => {
       const { id } = args;
-      const { comments, likes, ...post } = await prisma.post.findOne({
+      const { user, comments, files, ...post } = await prisma.post.findOne({
         where: { id },
         include: {
+          user: true,
           comments: {
             include: {
               user: true,
@@ -17,7 +20,8 @@ export default {
       return {
         post,
         comments,
-        likeCount: likes.length,
+        files,
+        user,
       };
     },
   },

@@ -1,6 +1,8 @@
+import prisma from "../../../../prisma";
+
 export default {
   Mutation: {
-    toggleFollow: async (_, args, { request, isAuthenticated, prisma }) => {
+    toggleFollow: async (_, args, { request, isAuthenticated }) => {
       isAuthenticated(request);
       const { id } = args;
       const { user } = request;

@@ -1,6 +1,8 @@
+import prisma from "../../../prisma";
+
 export default {
   Query: {
-    allUsers: (_, __, { prisma }) =>
+    allUsers: () =>
       prisma.user.findMany({
         include: {
           likes: true,

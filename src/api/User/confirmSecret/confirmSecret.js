@@ -1,8 +1,9 @@
+import prisma from "../../../prisma";
 import { generateToken } from "../../../utils";
 
 export default {
   Mutation: {
-    confirmSecret: async (_, args, { prisma }) => {
+    confirmSecret: async (_, args) => {
       try {
         const { secret, email } = args;
         const user = await prisma.user.findOne({ where: { email } });

@@ -1,6 +1,5 @@
-import { PrismaClient } from "@prisma/client";
+import prisma from "../../prisma";
 
-const prisma = new PrismaClient();
 export default {
   User: {
     fullName: (parent) => `${parent.firstName} ${parent.lastName}`,
@@ -17,18 +16,6 @@ export default {
       const { user } = request;
       const { id: parentId } = parent;
       return user.id === parentId;
-    },
-  },
-  Post: {
-    isLiked: (parent, _, { request }) => {
-      const { user } = request;
-      const { id: parentId } = parent;
-      return prisma.like.count({
-        where: {
-          postId: parentId,
-          userId: user.id,
-        },
-      });
     },
   },
 };

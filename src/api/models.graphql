@@ -28,6 +28,7 @@ type Post {
   comments: [Comment!]!
   files: [File!]!
   isLiked: Boolean!
+  likeCount: Int!
 }
 
 type Like {
