@@ -9,7 +9,7 @@ export default {
         const user = await prisma.user.findOne({ where: { email } });
         if (user.loginSecret === secret) {
           await prisma.user.update({
-            where: { id },
+            where: { id: user.id },
             data: { loginSecret: "" },
           });
           const token = generateToken(user.id);

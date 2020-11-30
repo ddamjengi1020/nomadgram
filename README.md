@@ -21,6 +21,10 @@ Express + Prisma + React & React Native
 - [x] See the full post
 - [x] Edit my profile
 - [x] Computed fields - isFollowing, isSelf, isLiked, likeCount
-- [x] Upload a photo
-- [ ] Edit the photo(Delete)
-- [ ] See the feed
+- [x] Upload a post
+- [x] Edit the post(Delete)
+- [x] See the feed
+- [ ] See Rooms
+- [ ] See Room
+- [ ] Send private Message
+- [ ] Receive Message (Realtime)

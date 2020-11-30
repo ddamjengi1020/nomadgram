@@ -6,6 +6,7 @@ export default {
       isAuthenticated(request);
       const { postId } = args;
       const { user } = request;
+      console.log(user);
       const filterOptions = {
         where: {
           AND: [{ userId: user.id }, { postId }],
