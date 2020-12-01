@@ -7,9 +7,7 @@ export default {
       const { user } = request;
       const { id: parentId } = parent;
       return prisma.user.count({
-        where: {
-          AND: [{ id: parentId }, { followers: { some: { id: user.id } } }],
-        },
+        where: { id: parentId, followers: { some: { id: user.id } } },
       });
     },
     isSelf: (parent, _, { request }) => {
