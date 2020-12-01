@@ -24,7 +24,8 @@ Express + Prisma + React & React Native
 - [x] Upload a post
 - [x] Edit the post(Delete)
 - [x] See the feed
-- [ ] See Rooms
+- [x] See Rooms
+- [x] Send private Message
 - [ ] See Room
-- [ ] Send private Message
 - [ ] Receive Message (Realtime)
+- [ ] Delete Room
