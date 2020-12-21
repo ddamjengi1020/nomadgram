@@ -1,8 +1,9 @@
+import { isAuthenticated } from "../../../middlewares";
 import prisma from "../../../prisma";
 
 export default {
   Query: {
-    me: (_, __, { request, isAuthenticated }) => {
+    me: (_, __, { request }) => {
       isAuthenticated(request);
       const { user } = request;
       return prisma.user.findOne({

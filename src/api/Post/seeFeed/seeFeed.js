@@ -12,14 +12,30 @@ export default {
         .following();
       return prisma.post.findMany({
         where: {
-          userId: {
-            in: [...following.map((user) => user.id)],
-          },
+          OR: [
+            {
+              userId: {
+                in: [...following.map((user) => user.id)],
+              },
+            },
+            {
+              userId: user.id,
+            },
+          ],
         },
         include: {
           files: true,
-          likes: true,
+          likes: {
+            include: {
+              user: true,
+            },
+          },
           user: true,
+          comments: {
+            include: {
+              user: true,
+            },
+          },
         },
         orderBy: {
           createAt: "desc",

@@ -6,47 +6,51 @@ export default {
       isAuthenticated(request);
       const { id } = args;
       const { user } = request;
-      try {
-        const { following } = await prisma.user.findOne({
-          where: {
-            id: user.id,
-          },
-          include: {
-            following: true,
-          },
-        });
-        const existedFollowing = following.some(
-          (follow) => follow["id"] === id
-        );
-        if (existedFollowing) {
-          await prisma.user.update({
+      if (id !== user.id) {
+        try {
+          const { following } = await prisma.user.findOne({
             where: {
               id: user.id,
             },
-            data: {
-              following: {
-                disconnect: {
-                  id,
-                },
-              },
+            include: {
+              following: true,
             },
           });
-        } else {
-          await prisma.user.update({
-            where: {
-              id: user.id,
-            },
-            data: {
-              following: {
-                connect: {
-                  id,
+          const existedFollowing = following.some(
+            (follow) => follow["id"] === id
+          );
+          if (existedFollowing) {
+            await prisma.user.update({
+              where: {
+                id: user.id,
+              },
+              data: {
+                following: {
+                  disconnect: {
+                    id,
+                  },
                 },
               },
-            },
-          });
+            });
+          } else {
+            await prisma.user.update({
+              where: {
+                id: user.id,
+              },
+              data: {
+                following: {
+                  connect: {
+                    id,
+                  },
+                },
+              },
+            });
+          }
+          return true;
+        } catch (error) {
+          return false;
         }
-        return true;
-      } catch (error) {
+      } else {
         return false;
       }
     },

@@ -26,6 +26,6 @@ Express + Prisma + React & React Native
 - [x] See the feed
 - [x] See Rooms
 - [x] Send private Message
-- [ ] See Room
+- [x] See Room
 - [ ] Receive Message (Realtime)
 - [ ] Delete Room

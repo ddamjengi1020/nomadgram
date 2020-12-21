@@ -16,5 +16,9 @@ export default {
       const { id: parentId } = parent;
       return prisma.like.count({ where: { postId: parentId } });
     },
+    commentCount: (parent) => {
+      const { id: parentId } = parent;
+      return prisma.comment.count({ where: { postId: parentId } });
+    },
   },
 };

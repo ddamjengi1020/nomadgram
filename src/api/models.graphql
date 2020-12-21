@@ -32,6 +32,7 @@ type Post {
   files: [File!]!
   isLiked: Boolean!
   likeCount: Int!
+  commentCount: Int!
   createAt: String
   updateAt: String
 }

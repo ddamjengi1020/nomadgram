@@ -11,18 +11,18 @@ export default {
             OR: [
               {
                 location: {
-                  startsWith: term,
+                  contains: term,
                 },
               },
               {
                 caption: {
-                  startsWith: term,
+                  contains: term,
                 },
               },
             ],
           },
           include: {
-            likes: true,
+            files: true,
           },
         });
       }
