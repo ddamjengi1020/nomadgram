@@ -13,7 +13,11 @@ export default {
               user: true,
             },
           },
-          likes: true,
+          likes: {
+            include: {
+              user: true,
+            },
+          },
           files: true,
         },
       });

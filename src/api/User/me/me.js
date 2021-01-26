@@ -11,7 +11,24 @@ export default {
           id: user.id,
         },
         include: {
-          posts: true,
+          posts: {
+            include: {
+              user: true,
+              files: true,
+              likes: {
+                include: {
+                  user: true,
+                },
+              },
+              comments: {
+                include: {
+                  user: true,
+                },
+              },
+            },
+          },
+          followers: true,
+          following: true,
         },
       });
     },
