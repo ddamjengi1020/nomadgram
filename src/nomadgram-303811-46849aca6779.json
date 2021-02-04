@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "nomadgram-303811",
+  "private_key_id": "46849aca6779468ef0822afaaeedea9ff2b4c891",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC4ogI6SygVVPVU\nM7FPqpIzRAghriIZ1THQSiCSyY6XuonZUXU965hjPYPJTCWQ3Rt8iAblpfu1egct\nzsTuIE3qYvngu/XW4ydWv0rDjfkIjfXA3ed6Ej3eIFv8yrlLhc0BcRzb/YJs+hfe\nefjGMmskc2DBveFteW/6PhqQXudonPnZSy6XNWXZHBnshUhDTgKwlf8wCGOZIll/\n+3F2yCB0YNLEBdXxVHfjr2hRzFYaUgVgXx/8LW5UTU3PRTVomYPxs4DvmNUNhZLE\np5OKVvG8Q97CItRnRWoNBRq6lGqENLENMiqSziCVVsZPgHKESTHfY5Aimn/93mBf\nMczaBNMpAgMBAAECggEAAvN39KWR4PFoMG3ZFixkRNSACsXFPsN1Fd6xcZcuI8ez\n/1i5doFnAKMRkayZZxzZnR5xeccy5D4skjNdW28Bv87QLqLidYpQ7SaGk+SXh+b4\n+Bmz4vQasAu1XK+C0a20TqMXsn51ULeYnRI3Azf4FW+QqtgVm9HWk9ndQ9R4f2gH\n9RiBfZB6IkOMq338DaDAPoQCB3lzcHjJv1594L1avICoWcRX1EJMYtKnbFjQZlAT\nqNtMxIrqTCaFUPyo6qWduxgM1wkrKR8TT5e1TUhMGa+gysBV5Bm9+kOtgHeO46Uf\nckiqxK77QWugPXb8FNvE/VLMrdT2yIaFADeeM3IT2QKBgQDaqL44QkAH/2vP6LNJ\nLlHdKIzeyreiAKXyPg4NUGo785GvEHb8SqEactyoH+/Uvkyc4S6axLeYr+qZHrE8\n0iUS1FwKpzNMGJQvq7O68M8TtMI9+3or+juF7TmPy6jf62F0/kVM91UGDPZRVdaE\nCr3IqEoh/4Ay4eL4tWGUl31pVQKBgQDYKbd3G+anmQCWf8+p4lJTaWzTyIsQjY4R\ncA8Ojmu04bx6uSG0uR775h8QHEwCfUOc0BfOc0qdyFsD/i2YOPeWdIVNNDtzn7b+\nfUVBFFAsujkMlQQl0HkxOmVScYhahj+Zj5HRLgv/beOn6J+n4k1+su9k8LkgofTs\nEMuYqCCyhQKBgFi4BM5Q2ygjk7v8/9meiKrCTD4NZGq/9pUOZqcyTJhcoGy2soB1\nS16u4ib5JldciztQBpfXX2L9ZaORF3rFDTPRpDLSWnbythWNhlRAZtTpD7MUeSKk\n2kfh0+wrRy7rk1Rj4vxykjXtRngD6xESRqTG26VlxL9gdbZR6fDfcowtAoGBAImb\nROfWIydeBznHc3M6WB4xZs4LRDvtYRtIss0ZbQdhDJMzd3mMv2SsQeoHmXucMoaJ\nEh6i1kVLXmVUUcItwa9Nze4v6gjZC61GIegj/kX65oZT9qf75qqn+ghZreuyupoP\nA0yee5THZ71kIP7G2X5mem9PrwpPD5OXvYQYw3fhAoGBAIcp6rPzLHn0O4XucEY/\nv2hpSjszB++GTyRNAkOfkIUWusszclWsyP2kWQ8m3v1CuTy11hIvOC6hejqKXJE2\nhqyENEht0GbU5WOxGis7nxDUfyYDchAIFH+pZgJ8Gx2K482B4MskPgUzi4wN3uWO\nTMNsteHWs4wv4spH4TNWo0t6\n-----END PRIVATE KEY-----\n",
+  "client_email": "nomadgram@nomadgram-303811.iam.gserviceaccount.com",
+  "client_id": "110150159301322403076",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/nomadgram%40nomadgram-303811.iam.gserviceaccount.com"
+}
