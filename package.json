@@ -10,7 +10,7 @@
     "dev": "nodemon --exec babel-node src/server.js",
     "dev_generate": "prisma migrate dev --preview-feature --schema=./src/prisma/schema.prisma",
     "copy_all": "yarn copy src/api/**/*.graphql build/api && yarn copy src/prisma/**/*.prisma build/prisma",
-    "build_generate": "prisma migrate deploy --preview-feature --schema=./build/prisma/schema.prisma",
+    "build_generate": "prisma migrate deploy --preview-feature --schema=./build/prisma/schema.prisma && prisma generate --schema=./build/prisma/schema.prisma",
     "build": "babel src -d build",
     "postbuild": "yarn copy_all && yarn build_generate",
     "start": "node build/server.js"
