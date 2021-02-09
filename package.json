@@ -8,9 +8,11 @@
   "license": "MIT",
   "scripts": {
     "dev": "nodemon --exec babel-node src/server.js",
-    "generate": "cd src/prisma && npx prisma migrate save --experimental && npx prisma migrate up --experimental && npx prisma generate",
+    "dev_generate": "prisma migrate dev --preview-feature --schema=./src/prisma/schema.prisma",
+    "copy_all": "yarn copy src/api/**/*.graphql build/api && yarn copy src/prisma/**/*.prisma build/prisma",
+    "build_generate": "prisma migrate deploy --preview-feature --schema=./build/prisma/schema.prisma",
     "build": "babel src -d build",
-    "postbuild": "yarn copy src/api/**/*.graphql build/api",
+    "postbuild": "yarn copy_all && yarn build_generate",
     "start": "node build/server.js"
   },
   "dependencies": {
@@ -32,7 +34,8 @@
     "nodemailer": "^6.4.14",
     "nodemailer-sendgrid-transport": "^0.2.0",
     "passport": "^0.4.1",
-    "passport-jwt": "^4.0.0"
+    "passport-jwt": "^4.0.0",
+    "prisma": "^2.16.1"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.12.15",
